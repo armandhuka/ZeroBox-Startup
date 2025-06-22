@@ -4,9 +4,9 @@ import { Clock } from 'lucide-react';
 
 const StickyBottomBar = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 1,
-    minutes: 42,
-    seconds: 55
+    hours: 2,
+    minutes: 0,
+    seconds: 0
   });
 
   useEffect(() => {
