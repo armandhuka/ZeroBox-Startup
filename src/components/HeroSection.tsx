@@ -95,7 +95,7 @@ const HeroSection = () => {
             <div className="text-sm text-gray-400">Rating</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-montserrat font-black text-neon-green">₹5+</div>
+            <div className="text-2xl font-montserrat font-black text-neon-green">₹5L+</div>
             <div className="text-sm text-gray-400">Earning</div>
           </div>
         </div>
