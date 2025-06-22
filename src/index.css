@@ -1,0 +1,109 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 18 18 18; /* #121212 */
+    --foreground: 245 245 245; /* #F5F5F5 */
+
+    --card: 18 18 18;
+    --card-foreground: 245 245 245;
+
+    --popover: 18 18 18;
+    --popover-foreground: 245 245 245;
+
+    --primary: 0 255 135; /* Neon Green #00FF87 */
+    --primary-foreground: 18 18 18;
+
+    --secondary: 253 216 53; /* Yellow #FDD835 */
+    --secondary-foreground: 18 18 18;
+
+    --muted: 40 40 40;
+    --muted-foreground: 163 163 163;
+
+    --accent: 0 255 135;
+    --accent-foreground: 18 18 18;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 245 245 245;
+
+    --border: 40 40 40;
+    --input: 40 40 40;
+    --ring: 0 255 135;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 18 18 18;
+    --sidebar-foreground: 245 245 245;
+    --sidebar-primary: 0 255 135;
+    --sidebar-primary-foreground: 18 18 18;
+    --sidebar-accent: 40 40 40;
+    --sidebar-accent-foreground: 245 245 245;
+    --sidebar-border: 40 40 40;
+    --sidebar-ring: 0 255 135;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-zerobox-black text-off-white font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-neon-green to-zerobox-yellow bg-clip-text text-transparent;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 10px rgba(0, 255, 135, 0.5), 0 0 20px rgba(0, 255, 135, 0.3), 0 0 30px rgba(0, 255, 135, 0.1);
+  }
+  
+  .cta-button {
+    @apply bg-gradient-to-r from-neon-green to-green-400 hover:from-green-400 hover:to-neon-green text-zerobox-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FF87;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00CC6F;
+}
